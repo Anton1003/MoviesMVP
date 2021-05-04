@@ -19,7 +19,7 @@ final class MoviesTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-        if let vcMVD = segue.destination as? MovieDetailViewController {
+        if let vcMVD = segue.destination as? DetailViewController {
             guard let row = tableView.indexPathForSelectedRow?.row else { return }
             let movie = movies[row]
             vcMVD.movie = movie
