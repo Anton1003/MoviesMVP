@@ -11,7 +11,7 @@ import Foundation
 // MARK: - LoaderModel
 
 ///
-struct LoaderModel: Codable {
+struct Film: Codable {
     let averageRating: Double
     let backdropPath: String
     let comments: [String: String?]

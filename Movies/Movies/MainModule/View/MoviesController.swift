@@ -7,7 +7,7 @@
 
 import UIKit
 ///
-final class MoviesTableViewController: UITableViewController {
+final class MoviesController: UITableViewController {
     private var movies: [Result] = []
 
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ final class MoviesTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-        if let vcMVD = segue.destination as? MovieDetailViewController {
+        if let vcMVD = segue.destination as? DetailViewController {
             guard let row = tableView.indexPathForSelectedRow?.row else { return }
             let movie = movies[row]
             vcMVD.movie = movie
@@ -40,7 +40,7 @@ final class MoviesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "movieCell",
             for: indexPath
-        ) as? MovieTableViewCell else { return UITableViewCell() }
+        ) as? MovieCell else { return UITableViewCell() }
         cell.prepareCell(movie: movies[indexPath.row])
         return cell
     }

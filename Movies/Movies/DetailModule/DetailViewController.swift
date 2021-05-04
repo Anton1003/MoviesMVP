@@ -7,7 +7,7 @@
 
 import UIKit
 ///
-final class MovieDetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     @IBOutlet var bigPosterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var categoriesLabel: UILabel!
