@@ -29,16 +29,18 @@ final class MoviesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in _: UITableView) -> Int {
-        return 1
+        1
     }
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return movies.count
+        movies.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell",
-                                                       for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "movieCell",
+            for: indexPath
+        ) as? MovieTableViewCell else { return UITableViewCell() }
         cell.prepareCell(movie: movies[indexPath.row])
         return cell
     }

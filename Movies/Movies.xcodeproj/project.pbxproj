@@ -86,11 +86,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE98F72C25F94C17008044B4 /* Build configuration list for PBXNativeTarget "Movies" */;
 			buildPhases = (
-				CE98F75A25FA8308008044B4 /* ShellScript */,
-				CE98F75B25FA830A008044B4 /* ShellScript */,
 				CE98F71425F94C10008044B4 /* Sources */,
 				CE98F71525F94C10008044B4 /* Frameworks */,
 				CE98F71625F94C10008044B4 /* Resources */,
+				CE98F75B25FA830A008044B4 /* SwiftFormat */,
+				CE98F75A25FA8308008044B4 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -147,7 +147,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CE98F75A25FA8308008044B4 /* ShellScript */ = {
+		CE98F75A25FA8308008044B4 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -156,6 +156,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -164,7 +165,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		CE98F75B25FA830A008044B4 /* ShellScript */ = {
+		CE98F75B25FA830A008044B4 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,6 +174,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftFormat;
 			outputFileListPaths = (
 			);
 			outputPaths = (
