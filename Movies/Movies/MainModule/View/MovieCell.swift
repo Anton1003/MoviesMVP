@@ -7,7 +7,7 @@
 
 import UIKit
 ///
-final class MovieTableViewCell: UITableViewCell {
+final class MovieCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var summaryLabel: UILabel!
     @IBOutlet var ratingLabel: UILabel!

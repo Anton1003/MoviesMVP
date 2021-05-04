@@ -7,7 +7,7 @@
 
 import UIKit
 ///
-final class MoviesTableViewController: UITableViewController {
+final class MoviesController: UITableViewController {
     private var movies: [Result] = []
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ final class MoviesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "movieCell",
             for: indexPath
-        ) as? MovieTableViewCell else { return UITableViewCell() }
+        ) as? MovieCell else { return UITableViewCell() }
         cell.prepareCell(movie: movies[indexPath.row])
         return cell
     }
