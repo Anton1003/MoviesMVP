@@ -9,7 +9,6 @@ import Foundation
 
 protocol MainViewProtocol: AnyObject {
     func succes()
-    func failure()
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
@@ -32,9 +31,11 @@ class MainPresenter: MainViewPresenterProtocol {
 
     func getFilms() {
         networkingService.getMovies { [weak self] film in
-            guard let self = self else { return }
-            self.films = film
-            self.view?.succes()
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.films = film
+                self.view?.succes()
+            }
         }
     }
 }

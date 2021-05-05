@@ -14,6 +14,7 @@
 		CE8436F92641E1C600B20DFC /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F82641E1C600B20DFC /* BaseRouter.swift */; };
 		CE8436FD2641E6B000B20DFC /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436FC2641E6B000B20DFC /* MainRouter.swift */; };
 		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
+		CE84370D26431A0D00B20DFC /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */; };
 		CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98F71B25F94C10008044B4 /* AppDelegate.swift */; };
 		CE98F71E25F94C10008044B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98F71D25F94C10008044B4 /* SceneDelegate.swift */; };
 		CE98F72325F94C10008044B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE98F72125F94C10008044B4 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		CE8436F82641E1C600B20DFC /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		CE8436FC2641E6B000B20DFC /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		CE8437012642FC3B00B20DFC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		CE98F71825F94C10008044B4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE98F71B25F94C10008044B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE98F71D25F94C10008044B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CE98F74C25FA78CE008044B4 /* NetworkService.swift */,
 				CE8436F82641E1C600B20DFC /* BaseRouter.swift */,
 				CE8436FC2641E6B000B20DFC /* MainRouter.swift */,
+				CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */,
 				CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */,
 				CE98F74825FA784F008044B4 /* Film.swift in Sources */,
+				CE84370D26431A0D00B20DFC /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
