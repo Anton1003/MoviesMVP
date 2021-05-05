@@ -19,13 +19,13 @@ final class MoviesController: UITableViewController {
         }
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-//        if let vcMVD = segue.destination as? DetailController {
-//            guard let row = tableView.indexPathForSelectedRow?.row else { return }
-//            let movie = movies[row]
-//            vcMVD.movie = movie
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        if let vcMVD = segue.destination as? DetailController {
+            guard let row = tableView.indexPathForSelectedRow?.row else { return }
+            let movie = movies[row]
+            vcMVD.movie = movie
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -42,7 +42,7 @@ final class MoviesController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router.toDetail()
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        router.toDetail()
+//    }
 }

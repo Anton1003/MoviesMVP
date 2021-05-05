@@ -13,6 +13,7 @@
 		CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F22641E15200B20DFC /* InstantiateHelper.swift */; };
 		CE8436F92641E1C600B20DFC /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F82641E1C600B20DFC /* BaseRouter.swift */; };
 		CE8436FD2641E6B000B20DFC /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436FC2641E6B000B20DFC /* MainRouter.swift */; };
+		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
 		CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98F71B25F94C10008044B4 /* AppDelegate.swift */; };
 		CE98F71E25F94C10008044B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98F71D25F94C10008044B4 /* SceneDelegate.swift */; };
 		CE98F72325F94C10008044B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE98F72125F94C10008044B4 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		CE8436F22641E15200B20DFC /* InstantiateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiateHelper.swift; sourceTree = "<group>"; };
 		CE8436F82641E1C600B20DFC /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		CE8436FC2641E6B000B20DFC /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CE8437012642FC3B00B20DFC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CE98F71825F94C10008044B4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE98F71B25F94C10008044B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE98F71D25F94C10008044B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				CE8436DF2641D64300B20DFC /* Model */,
 				CE8436DC2641D63800B20DFC /* View */,
+				CE8437002642FC0400B20DFC /* Presenter */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -142,6 +145,14 @@
 				CE98F74725FA784F008044B4 /* Film.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE8437002642FC0400B20DFC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE8437012642FC3B00B20DFC /* MainPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CE98F70F25F94C10008044B4 = {
@@ -386,6 +397,7 @@
 				CE8436FD2641E6B000B20DFC /* MainRouter.swift in Sources */,
 				CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */,
 				CE98F71E25F94C10008044B4 /* SceneDelegate.swift in Sources */,
+				CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */,
 				CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */,
 				CE98F74825FA784F008044B4 /* Film.swift in Sources */,
 			);

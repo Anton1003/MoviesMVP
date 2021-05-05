@@ -10,6 +10,6 @@ import UIKit
 final class MainRouter: BaseRouter {
     func toDetail() {
         let controller = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(DetailController.self)
-        show(controller)
+        present(controller)
     }
 }
