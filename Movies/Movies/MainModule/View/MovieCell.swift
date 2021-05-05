@@ -29,7 +29,6 @@ final class MovieCell: UITableViewCell {
         summaryLabel.text = movie.releaseDate
         ratingLabel.text = "\(movie.popularity)"
         categoriesLabel.text = "\(movie.voteAverage)"
-
         posterImageView.image = nil
         if cacheDictionary[movie.posterPath] != nil {
             posterImageView.image = UIImage(data: cacheDictionary[movie.posterPath] ?? Data())

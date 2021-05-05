@@ -9,18 +9,11 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
     func application(
         _: UIApplication,
         didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        let controller: UIViewController
-        controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)
-        window = UIWindow()
-        window?.rootViewController = UINavigationController(rootViewController: controller)
-        window?.makeKeyAndVisible()
-        return true
+        true
     }
 
     // MARK: UISceneSession Lifecycle
