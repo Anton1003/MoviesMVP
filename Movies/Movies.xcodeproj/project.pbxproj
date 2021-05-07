@@ -44,7 +44,7 @@
 		CE8436902641CA2E00B20DFC /* MoviesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUnitTests.swift; sourceTree = "<group>"; };
 		CE8436942641CA2E00B20DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8436CB2641D4DD00B20DFC /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = Movies/DetailModule/Detail.storyboard; sourceTree = SOURCE_ROOT; };
+		CE8436CB2641D4DD00B20DFC /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = "Movies/DetailModule/New Group/Detail.storyboard"; sourceTree = SOURCE_ROOT; };
 		CE8436F22641E15200B20DFC /* InstantiateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiateHelper.swift; sourceTree = "<group>"; };
 		CE8436F82641E1C600B20DFC /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		CE8436FC2641E6B000B20DFC /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -92,6 +92,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE56A0B126451BD800B73D84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE8436CB2641D4DD00B20DFC /* Detail.storyboard */,
+				CE98F73A25F954C9008044B4 /* DetailController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE8436912641CA2E00B20DFC /* MoviesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +125,7 @@
 		CE8436D82641D5B700B20DFC /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				CE8436CB2641D4DD00B20DFC /* Detail.storyboard */,
-				CE98F73A25F954C9008044B4 /* DetailController.swift */,
+				CE56A0B126451BD800B73D84 /* View */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";

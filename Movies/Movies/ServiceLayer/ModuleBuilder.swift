@@ -21,5 +21,3 @@ class ModuleBuilder: Builder {
         return view
     }
 }
-
- 
