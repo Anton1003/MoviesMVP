@@ -12,8 +12,6 @@
 		CE56A0BE26451DB700B73D84 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0BD26451DB700B73D84 /* DetailPresenter.swift */; };
 		CE8436932641CA2E00B20DFC /* MoviesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */; };
 		CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F22641E15200B20DFC /* InstantiateHelper.swift */; };
-		CE8436F92641E1C600B20DFC /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F82641E1C600B20DFC /* BaseRouter.swift */; };
-		CE8436FD2641E6B000B20DFC /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436FC2641E6B000B20DFC /* MainRouter.swift */; };
 		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
 		CE84370D26431A0D00B20DFC /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */; };
 		CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98F71B25F94C10008044B4 /* AppDelegate.swift */; };
@@ -48,8 +46,6 @@
 		CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUnitTests.swift; sourceTree = "<group>"; };
 		CE8436942641CA2E00B20DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8436F22641E15200B20DFC /* InstantiateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiateHelper.swift; sourceTree = "<group>"; };
-		CE8436F82641E1C600B20DFC /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
-		CE8436FC2641E6B000B20DFC /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		CE8437012642FC3B00B20DFC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		CE98F71825F94C10008044B4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,8 +121,6 @@
 			children = (
 				CE8436F22641E15200B20DFC /* InstantiateHelper.swift */,
 				CE98F74C25FA78CE008044B4 /* NetworkService.swift */,
-				CE8436F82641E1C600B20DFC /* BaseRouter.swift */,
-				CE8436FC2641E6B000B20DFC /* MainRouter.swift */,
 				CE84370C26431A0D00B20DFC /* ModuleBuilder.swift */,
 			);
 			path = ServiceLayer;
@@ -412,11 +406,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE98F74325FA7793008044B4 /* MoviesController.swift in Sources */,
-				CE8436F92641E1C600B20DFC /* BaseRouter.swift in Sources */,
 				CE98F73B25F954C9008044B4 /* DetailController.swift in Sources */,
 				CE98F75225FA798F008044B4 /* MovieCell.swift in Sources */,
 				CE98F74D25FA78CE008044B4 /* NetworkService.swift in Sources */,
-				CE8436FD2641E6B000B20DFC /* MainRouter.swift in Sources */,
 				CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */,
 				CE98F71E25F94C10008044B4 /* SceneDelegate.swift in Sources */,
 				CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */,

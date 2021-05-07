@@ -15,8 +15,6 @@ final class DetailController: UIViewController {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var summaryTextView: UITextView!
 
-    //    var movie: Result!
-
     var presenter: DetailViewPresenterProtocol!
 
     override func viewDidLoad() {
