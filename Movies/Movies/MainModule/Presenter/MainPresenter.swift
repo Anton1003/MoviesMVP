@@ -12,7 +12,7 @@ protocol MainViewProtocol: AnyObject {
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
-    var films: Film? { get set }
+    var films: [Result]? { get set }
     init(view: MainViewProtocol, networkingService: NetworkServiceProtocol)
     func getFilms()
 }
@@ -21,7 +21,7 @@ protocol MainViewPresenterProtocol: AnyObject {
 class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
     var networkingService: NetworkServiceProtocol!
-    var films: Film?
+    var films: [Result]?
 
     required init(view: MainViewProtocol, networkingService: NetworkServiceProtocol) {
         self.view = view
@@ -33,7 +33,7 @@ class MainPresenter: MainViewPresenterProtocol {
         networkingService.getMovies { [weak self] film in
             DispatchQueue.main.async {
                 guard let self = self else { return }
-                self.films = film
+                self.films = film.results
                 self.view?.succes()
             }
         }

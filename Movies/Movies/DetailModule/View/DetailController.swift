@@ -15,11 +15,24 @@ final class DetailController: UIViewController {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var summaryTextView: UITextView!
 
-    var movie: Result!
+    //    var movie: Result!
+
+    var presenter: DetailViewPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { return }
+        presenter.setFilm()
+    }
+}
+
+extension DetailController: DetailViewProtocol {
+    func setFilm(film: Result?) {
+        titleLabel.text = film?.title
+        ratingLabel.text = "\(film?.popularity ?? 0.0)"
+        summaryTextView.text = film?.overview
+        categoriesLabel.text = "\(film?.voteAverage ?? 0.0)"
+        durationLabel.text = film?.releaseDate
+        guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(film?.posterPath)") else { return }
         DispatchQueue.global().async { [weak self] in
             if let dataImage = try? Data(contentsOf: imageURL) {
                 DispatchQueue.main.async {
@@ -27,10 +40,5 @@ final class DetailController: UIViewController {
                 }
             }
         }
-        titleLabel.text = movie.title
-        ratingLabel.text = "\(movie.popularity)"
-        summaryTextView.text = movie.overview
-        categoriesLabel.text = "\(movie.voteAverage)"
-        durationLabel.text = movie.releaseDate
     }
 }
