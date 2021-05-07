@@ -13,20 +13,27 @@ protocol MainViewProtocol: AnyObject {
 
 protocol MainViewPresenterProtocol: AnyObject {
     var films: [Result]? { get set }
-    init(view: MainViewProtocol, networkingService: NetworkServiceProtocol)
+    init(view: MainViewProtocol, networkingService: NetworkServiceProtocol, router: RouterProtocol)
     func getFilms()
+    func tapOnTheFilm(film: Result?)
 }
 
 ///
 class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
     var networkingService: NetworkServiceProtocol!
+    var router: RouterProtocol?
     var films: [Result]?
 
-    required init(view: MainViewProtocol, networkingService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, networkingService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkingService = networkingService
+        self.router = router
         getFilms()
+    }
+
+    func tapOnTheFilm(film: Result?) {
+        router?.showDetail(film: film)
     }
 
     func getFilms() {

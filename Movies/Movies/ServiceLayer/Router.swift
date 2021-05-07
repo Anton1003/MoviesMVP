@@ -11,17 +11,17 @@ protocol RouterMain {
     var navigationController: UINavigationController? { get set }
     var builder: BuilderProtocol? { get set }
 }
+
 protocol RouterProtocol: RouterMain {
     func initialViewController()
     func showDetail(film: Result?)
-    func popToRoot()
 }
 
+///
 class Router: RouterProtocol {
-    
     var navigationController: UINavigationController?
     var builder: BuilderProtocol?
-    
+
     init(navigationController: UINavigationController, builder: BuilderProtocol) {
         self.navigationController = navigationController
         self.builder = builder
@@ -29,15 +29,15 @@ class Router: RouterProtocol {
 
     func initialViewController() {
         if let navigationController = navigationController {
-            guard let mainViewController = builder?.createMainModule() else { return }
+            guard let mainViewController = builder?.createMainModule(router: self) else { return }
+            navigationController.viewControllers = [mainViewController]
         }
     }
-    
+
     func showDetail(film: Result?) {
-        <#code#>
-    }
-    
-    func popToRoot() {
-        <#code#>
+        if let navigationController = navigationController {
+            guard let detailViewController = builder?.createDetailModule(film: film, router: self) else { return }
+            navigationController.pushViewController(detailViewController, animated: true)
+        }
     }
 }

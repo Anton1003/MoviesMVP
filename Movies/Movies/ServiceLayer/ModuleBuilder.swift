@@ -8,24 +8,24 @@
 import UIKit
 
 protocol BuilderProtocol {
-    func createMainModule() -> UIViewController
-    func createDetailModule(film: Result?) -> UIViewController
+    func createMainModule(router: RouterProtocol) -> UIViewController
+    func createDetailModule(film: Result?, router: RouterProtocol) -> UIViewController
 }
 
 ///
 class ModuleBuilder: BuilderProtocol {
-    func createMainModule() -> UIViewController {
+    func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)
         let networkService = NetworkService()
-        let presenter = MainPresenter(view: view, networkingService: networkService)
+        let presenter = MainPresenter(view: view, networkingService: networkService, router: router)
         view.presenter = presenter
         return view
     }
 
-    func createDetailModule(film: Result?) -> UIViewController {
+    func createDetailModule(film: Result?, router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(DetailController.self)
         let networkService = NetworkService()
-        let presenter = DetailPresenter(view: view, networkingService: networkService, film: film)
+        let presenter = DetailPresenter(view: view, networkingService: networkService, router: router, film: film)
         view.presenter = presenter
         return view
     }

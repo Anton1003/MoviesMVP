@@ -8,7 +8,6 @@
 import UIKit
 ///
 final class MoviesController: UITableViewController {
-
     var presenter: MainViewPresenterProtocol!
 
     override func viewDidLoad() {
@@ -38,8 +37,7 @@ final class MoviesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let film = presenter.films?[indexPath.row]
-        let detailVC = ModuleBuilder.createDetailModule(film: film)
-        navigationController?.pushViewController(detailVC, animated: true)
+        presenter.tapOnTheFilm(film: film)
     }
 }
 
