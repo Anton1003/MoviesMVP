@@ -11,7 +11,7 @@ protocol DetailViewProtocol: AnyObject {
 }
 
 protocol DetailViewPresenterProtocol: AnyObject {
-    init(view: DetailViewProtocol, networkingService: NetworkServiceProtocol, film: Result?)
+    init(view: DetailViewProtocol, networkingService: NetworkServiceProtocol, router: RouterProtocol, film: Result?)
     func setFilm()
 }
 
@@ -19,11 +19,18 @@ protocol DetailViewPresenterProtocol: AnyObject {
 class DetailPresenter: DetailViewPresenterProtocol {
     weak var view: DetailViewProtocol?
     var networkingService: NetworkServiceProtocol!
+    var router: RouterProtocol?
     var film: Result?
 
-    required init(view: DetailViewProtocol, networkingService: NetworkServiceProtocol, film: Result?) {
+    required init(
+        view: DetailViewProtocol,
+        networkingService: NetworkServiceProtocol,
+        router: RouterProtocol,
+        film: Result?
+    ) {
         self.view = view
         self.networkingService = networkingService
+        self.router = router
         self.film = film
     }
 
