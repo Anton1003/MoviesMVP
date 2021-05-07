@@ -21,7 +21,7 @@ final class MoviesController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        presenter?.films?.results.count ?? 0
+        presenter?.films?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,9 +30,17 @@ final class MoviesController: UITableViewController {
             for: indexPath
         )
             as? MovieCell else { return UITableViewCell() }
-        guard let movie = presenter.films?.results[indexPath.row] else { return UITableViewCell() }
+        guard let movie = presenter.films?[indexPath.row] else { return UITableViewCell() }
         cell.prepareCell(movie: movie)
         return cell
+    }
+
+//    MARK: - TableView Delegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let film = presenter.films?[indexPath.row]
+        let detailVC = ModuleBuilder.createDetailModule(film: film)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
