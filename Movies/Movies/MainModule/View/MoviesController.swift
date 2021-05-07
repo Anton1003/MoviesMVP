@@ -8,7 +8,6 @@
 import UIKit
 ///
 final class MoviesController: UITableViewController {
-//    private let router = MainRouter()
 
     var presenter: MainViewPresenterProtocol!
 
