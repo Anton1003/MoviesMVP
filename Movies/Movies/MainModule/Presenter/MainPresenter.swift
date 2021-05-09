@@ -19,7 +19,7 @@ protocol MainViewPresenterProtocol: AnyObject {
 }
 
 ///
-class MainPresenter: MainViewPresenterProtocol {
+final class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
     var networkingService: NetworkServiceProtocol!
     var router: RouterProtocol?

@@ -33,7 +33,7 @@ final class MoviesController: UITableViewController {
         return cell
     }
 
-//    MARK: - TableView Delegate
+    // MARK: TableView Delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let film = presenter.films?[indexPath.row]
