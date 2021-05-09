@@ -17,6 +17,7 @@
 		CE56A10326482A3000B73D84 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A10226482A2F00B73D84 /* RealmProvider.swift */; };
 		CE56A1072648361600B73D84 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A1062648361600B73D84 /* PhotoLoader.swift */; };
 		CE56A11426483F4D00B73D84 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A11326483F4D00B73D84 /* Photo.swift */; };
+		CE56A1212648708100B73D84 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A1202648708100B73D84 /* ImageCollectionCell.swift */; };
 		CE8436932641CA2E00B20DFC /* MoviesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */; };
 		CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F22641E15200B20DFC /* InstantiateHelper.swift */; };
 		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
@@ -56,6 +57,7 @@
 		CE56A10226482A2F00B73D84 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		CE56A1062648361600B73D84 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
 		CE56A11326483F4D00B73D84 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CE56A1202648708100B73D84 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		CE8436902641CA2E00B20DFC /* MoviesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUnitTests.swift; sourceTree = "<group>"; };
 		CE8436942641CA2E00B20DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CE98F73A25F954C9008044B4 /* DetailController.swift */,
+				CE56A1202648708100B73D84 /* ImageCollectionCell.swift */,
 				CE56A0B426451CA900B73D84 /* Detail.storyboard */,
 			);
 			path = View;
@@ -464,6 +467,7 @@
 				CE98F74325FA7793008044B4 /* MoviesController.swift in Sources */,
 				CE98F73B25F954C9008044B4 /* DetailController.swift in Sources */,
 				CE98F75225FA798F008044B4 /* MovieCell.swift in Sources */,
+				CE56A1212648708100B73D84 /* ImageCollectionCell.swift in Sources */,
 				CE98F74D25FA78CE008044B4 /* NetworkService.swift in Sources */,
 				CE98F71C25F94C10008044B4 /* AppDelegate.swift in Sources */,
 				CE56A10326482A3000B73D84 /* RealmProvider.swift in Sources */,

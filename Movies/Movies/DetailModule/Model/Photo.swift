@@ -20,7 +20,7 @@ final class Photo: Object {
     @objc dynamic var filmPath = ""
 
     override class func primaryKey() -> String? {
-        "filePath"
+        "filmPath"
     }
 }
 

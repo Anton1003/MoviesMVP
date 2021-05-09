@@ -12,7 +12,7 @@ protocol MainViewProtocol: AnyObject {
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
-    var films: [Result]? { get set }
+    var films: [Movie]? { get set }
     init(
         view: MainViewProtocol,
         networkingService: NetworkServiceProtocol,
@@ -21,7 +21,7 @@ protocol MainViewPresenterProtocol: AnyObject {
         realmProvider: RealmProviderProtocol
     )
     func getFilms()
-    func tapOnTheFilm(film: Result?)
+    func tapOnTheFilm(film: Movie?)
     func loadImage(by path: String?, completion: @escaping (UIImage?) -> ())
 }
 
@@ -32,7 +32,7 @@ final class MainPresenter: MainViewPresenterProtocol {
     private var router: RouterProtocol?
     private var photoLoader: PhotoLoaderProtocol?
     private var realmProvider: RealmProviderProtocol?
-    var films: [Result]?
+    var films: [Movie]?
 
     init(
         view: MainViewProtocol,
@@ -49,7 +49,7 @@ final class MainPresenter: MainViewPresenterProtocol {
         getFilms()
     }
 
-    func tapOnTheFilm(film: Result?) {
+    func tapOnTheFilm(film: Movie?) {
         router?.showDetail(film: film)
     }
 
