@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 ///
 
 // MARK: - Film
@@ -19,16 +20,22 @@ struct Film: Codable {
 // MARK: - Result
 
 ///
-struct Result: Codable {
-    let backdropPath: String
-    let id: Int
-    let overview: String
-    let popularity: Double
-    let posterPath, releaseDate, title: String
-    let voteAverage: Double
+final class Result: Object {
+    @objc dynamic var id = 0
+    @objc dynamic var overview = ""
+    @objc dynamic var popularity = 0.0
+    @objc dynamic var posterPath = ""
+    @objc dynamic var releaseDate = ""
+    @objc dynamic var title = ""
+    @objc dynamic var voteAverage = 0.0
 
+    override class func primaryKey() -> String? {
+        "title"
+    }
+}
+
+extension Result: Codable {
     enum CodingKeys: String, CodingKey {
-        case backdropPath = "backdrop_path"
         case id
         case overview, popularity
         case posterPath = "poster_path"
