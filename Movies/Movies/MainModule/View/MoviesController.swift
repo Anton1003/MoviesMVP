@@ -29,7 +29,9 @@ final class MoviesController: UITableViewController {
         )
             as? MovieCell else { return UITableViewCell() }
         guard let movie = presenter.films?[indexPath.row] else { return UITableViewCell() }
+        cell.delegate = self
         cell.prepareCell(movie: movie)
+//        cell.imageView?.image = presenter.loadImage(by: movie.posterPath, completion: <#T##(UIImage?) -> ()#>)
         return cell
     }
 
@@ -38,6 +40,12 @@ final class MoviesController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let film = presenter.films?[indexPath.row]
         presenter.tapOnTheFilm(film: film)
+    }
+}
+
+extension MoviesController: MovieCellDelegate {
+    func getImage(path: String, completion: @escaping (UIImage?) -> ()) {
+        presenter.loadImage(by: path, completion: completion)
     }
 }
 

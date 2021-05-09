@@ -17,7 +17,15 @@ class ModuleBuilder: BuilderProtocol {
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)
         let networkService = NetworkService()
-        let presenter = MainPresenter(view: view, networkingService: networkService, router: router)
+        let photoLoader = PhotoLoader()
+        let realmProvider = RealmProvider()
+        let presenter = MainPresenter(
+            view: view,
+            networkingService: networkService,
+            router: router,
+            photoLoader: photoLoader,
+            realmProvider: realmProvider
+        )
         view.presenter = presenter
         return view
     }
