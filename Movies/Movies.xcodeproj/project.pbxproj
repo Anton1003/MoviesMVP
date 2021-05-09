@@ -11,6 +11,9 @@
 		CE56A0B526451CA900B73D84 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE56A0B426451CA900B73D84 /* Detail.storyboard */; };
 		CE56A0BE26451DB700B73D84 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0BD26451DB700B73D84 /* DetailPresenter.swift */; };
 		CE56A0DF264542CD00B73D84 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0DE264542CD00B73D84 /* Router.swift */; };
+		CE56A0ED264559E400B73D84 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0EC264559E400B73D84 /* MainPresenterTest.swift */; };
+		CE56A0F426456A1800B73D84 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0F326456A1800B73D84 /* RouterTest.swift */; };
+		CE56A0F92645726100B73D84 /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0F82645726100B73D84 /* DetailPresenterTest.swift */; };
 		CE8436932641CA2E00B20DFC /* MoviesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */; };
 		CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F22641E15200B20DFC /* InstantiateHelper.swift */; };
 		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
@@ -44,6 +47,9 @@
 		CE56A0B426451CA900B73D84 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		CE56A0BD26451DB700B73D84 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		CE56A0DE264542CD00B73D84 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CE56A0EC264559E400B73D84 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		CE56A0F326456A1800B73D84 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		CE56A0F82645726100B73D84 /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
 		CE8436902641CA2E00B20DFC /* MoviesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUnitTests.swift; sourceTree = "<group>"; };
 		CE8436942641CA2E00B20DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,9 +115,28 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		CE56A0F0264559FA00B73D84 /* MainModuleTest */ = {
+			isa = PBXGroup;
+			children = (
+				CE56A0EC264559E400B73D84 /* MainPresenterTest.swift */,
+				CE56A0F326456A1800B73D84 /* RouterTest.swift */,
+			);
+			path = MainModuleTest;
+			sourceTree = "<group>";
+		};
+		CE56A0F72645723200B73D84 /* DetailModuleTest */ = {
+			isa = PBXGroup;
+			children = (
+				CE56A0F82645726100B73D84 /* DetailPresenterTest.swift */,
+			);
+			path = DetailModuleTest;
+			sourceTree = "<group>";
+		};
 		CE8436912641CA2E00B20DFC /* MoviesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE56A0F0264559FA00B73D84 /* MainModuleTest */,
+				CE56A0F72645723200B73D84 /* DetailModuleTest */,
 				CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */,
 				CE8436942641CA2E00B20DFC /* Info.plist */,
 			);
@@ -401,6 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8436932641CA2E00B20DFC /* MoviesUnitTests.swift in Sources */,
+				CE56A0F426456A1800B73D84 /* RouterTest.swift in Sources */,
+				CE56A0ED264559E400B73D84 /* MainPresenterTest.swift in Sources */,
+				CE56A0F92645726100B73D84 /* DetailPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,8 @@ extension DetailController: DetailViewProtocol {
         summaryTextView.text = film?.overview
         categoriesLabel.text = "\(film?.voteAverage ?? 0.0)"
         durationLabel.text = film?.releaseDate
-        guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(film?.posterPath)") else { return }
+        guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(String(describing: film?.posterPath))")
+        else { return }
         DispatchQueue.global().async { [weak self] in
             if let dataImage = try? Data(contentsOf: imageURL) {
                 DispatchQueue.main.async {
