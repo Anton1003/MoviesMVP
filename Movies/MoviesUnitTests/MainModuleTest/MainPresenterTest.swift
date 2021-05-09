@@ -14,7 +14,7 @@ class MockView: MainViewProtocol {
 }
 
 ///
-class MockNetworkService: NetworkServiceProtocol {
+class MockNetworkService: GetFilmServiceProtocol {
     var film: Film!
 
     init() {}
@@ -38,7 +38,7 @@ class MockNetworkService: NetworkServiceProtocol {
 class MainPresenterTest: XCTestCase {
     var view: MockView!
     var presenter: MainPresenter!
-    var networkService: NetworkServiceProtocol!
+    var networkService: GetFilmServiceProtocol!
     var router: RouterProtocol!
     var films: [Film] = []
 

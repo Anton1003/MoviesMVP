@@ -17,7 +17,7 @@ class MockDetailView: DetailViewProtocol {
 class DetailPresenterTest: XCTestCase {
     var view: MockDetailView!
     var presenter: DetailPresenter!
-    var networkService: NetworkServiceProtocol!
+    var networkService: GetFilmServiceProtocol!
     var router: RouterProtocol!
     var films: [Film] = []
 

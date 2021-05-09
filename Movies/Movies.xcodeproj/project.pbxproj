@@ -16,6 +16,7 @@
 		CE56A0F92645726100B73D84 /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A0F82645726100B73D84 /* DetailPresenterTest.swift */; };
 		CE56A10326482A3000B73D84 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A10226482A2F00B73D84 /* RealmProvider.swift */; };
 		CE56A1072648361600B73D84 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A1062648361600B73D84 /* PhotoLoader.swift */; };
+		CE56A11426483F4D00B73D84 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56A11326483F4D00B73D84 /* Photo.swift */; };
 		CE8436932641CA2E00B20DFC /* MoviesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */; };
 		CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8436F22641E15200B20DFC /* InstantiateHelper.swift */; };
 		CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8437012642FC3B00B20DFC /* MainPresenter.swift */; };
@@ -54,6 +55,7 @@
 		CE56A0F82645726100B73D84 /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
 		CE56A10226482A2F00B73D84 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		CE56A1062648361600B73D84 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
+		CE56A11326483F4D00B73D84 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CE8436902641CA2E00B20DFC /* MoviesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8436922641CA2E00B20DFC /* MoviesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUnitTests.swift; sourceTree = "<group>"; };
 		CE8436942641CA2E00B20DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CE56A11726483F5800B73D84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE56A11326483F4D00B73D84 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CE8436912641CA2E00B20DFC /* MoviesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		CE8436D82641D5B700B20DFC /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE56A11726483F5800B73D84 /* Model */,
 				CE56A0B126451BD800B73D84 /* View */,
 				CE56A0BC26451D7200B73D84 /* Presenter */,
 			);
@@ -459,6 +470,7 @@
 				CE98F71E25F94C10008044B4 /* SceneDelegate.swift in Sources */,
 				CE56A0DF264542CD00B73D84 /* Router.swift in Sources */,
 				CE8437022642FC3C00B20DFC /* MainPresenter.swift in Sources */,
+				CE56A11426483F4D00B73D84 /* Photo.swift in Sources */,
 				CE8436F32641E15200B20DFC /* InstantiateHelper.swift in Sources */,
 				CE56A0BE26451DB700B73D84 /* DetailPresenter.swift in Sources */,
 				CE56A1072648361600B73D84 /* PhotoLoader.swift in Sources */,
