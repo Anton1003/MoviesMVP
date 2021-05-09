@@ -28,20 +28,19 @@ final class Result: Object {
     @objc dynamic var releaseDate = ""
     @objc dynamic var title = ""
     @objc dynamic var voteAverage = 0.0
-    
+
     override class func primaryKey() -> String? {
         "title"
     }
 }
-   
-extension Result: Codable {
-        enum CodingKeys: String, CodingKey {
-            case id
-            case overview, popularity
-            case posterPath = "poster_path"
-            case releaseDate = "release_date"
-            case title
-            case voteAverage = "vote_average"
-        }
-}
 
+extension Result: Codable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case overview, popularity
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case title
+        case voteAverage = "vote_average"
+    }
+}

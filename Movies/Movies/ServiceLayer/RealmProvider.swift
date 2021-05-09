@@ -18,7 +18,7 @@ final class RealmProvider: RealmProviderProtocol {
         guard let realm = try? Realm(configuration: config) else { fatalError("Error Realm") }
         return realm.objects(type)
     }
-    
+
     func save<RealmObject: Object>(items: [RealmObject]) {
         do {
             let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
@@ -30,6 +30,4 @@ final class RealmProvider: RealmProviderProtocol {
             print(error.localizedDescription)
         }
     }
-    
-    
 }
