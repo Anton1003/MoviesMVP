@@ -13,7 +13,7 @@ protocol GetFilmServiceProtocol {
 }
 
 protocol GetImagesServiceProtocol {
-    func loadPhotos(for filmId: Int, completion: @escaping ([Photo]?) -> ())
+    func loadPhotos(for filmId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ())
 }
 
 protocol NetworkServiceProtocol: GetFilmServiceProtocol, GetImagesServiceProtocol {}
@@ -39,19 +39,24 @@ class NetworkService: NetworkServiceProtocol {
             }
     }
 
-    func loadPhotos(for filmId: Int, completion: @escaping ([Photo]?) -> ()) {
-        let path = "/\(filmId)/images"
+    func loadPhotos(for filmId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ()) {
+        let path = "/3/movie/\(filmId)/images"
         let parameters: Parameters = [
             "api_key": apiKey
         ]
 
         AF.request(baseURL + path, method: .get, parameters: parameters)
-            .responseDecodable(of: [Photo].self, queue: .global()) { response in
+            .responseData(queue: .global()) { response in
                 switch response.result {
                 case let .success(data):
-                    completion(data)
+                    do {
+                        let photos = try JSONDecoder().decode(PhotoModel.self, from: data).backdrops
+                        completion(.success(photos))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 case let .failure(error):
-                    print(error.localizedDescription)
+                    completion(.failure(error))
                 }
             }
     }

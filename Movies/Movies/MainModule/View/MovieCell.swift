@@ -31,7 +31,7 @@ final class MovieCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func prepareCell(movie: Result) {
+    func prepareCell(movie: Movie) {
         titleLabel.text = movie.title
         summaryLabel.text = movie.releaseDate
         ratingLabel.text = "\(movie.popularity)"
@@ -40,20 +40,5 @@ final class MovieCell: UITableViewCell {
             guard let self = self else { return }
             self.posterImageView.image = image
         }
-
-//        if cacheDictionary[movie.posterPath] != nil {
-//            posterImageView.image = UIImage(data: cacheDictionary[movie.posterPath] ?? Data())
-//        } else {
-//            guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { return }
-//
-//            DispatchQueue.global().async { [weak self] in
-//                if let dataImage = try? Data(contentsOf: imageURL) {
-//                    DispatchQueue.main.async {
-//                        self?.cacheDictionary[movie.posterPath] = dataImage
-//                        self?.posterImageView.image = UIImage(data: dataImage)
-//                    }
-//                }
-//            }
-//        }
     }
 }

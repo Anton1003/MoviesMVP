@@ -14,13 +14,13 @@ import RealmSwift
 ///
 struct Film: Codable {
     let id: Int
-    let results: [Result]
+    let results: [Movie]
 }
 
 // MARK: - Result
 
 ///
-final class Result: Object {
+final class Movie: Object {
     @objc dynamic var id = 0
     @objc dynamic var overview = ""
     @objc dynamic var popularity = 0.0
@@ -34,7 +34,7 @@ final class Result: Object {
     }
 }
 
-extension Result: Codable {
+extension Movie: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case overview, popularity

@@ -14,7 +14,7 @@ protocol RouterMain {
 
 protocol RouterProtocol: RouterMain {
     func initialViewController()
-    func showDetail(film: Result?)
+    func showDetail(film: Movie?)
 }
 
 ///
@@ -34,9 +34,9 @@ class Router: RouterProtocol {
         }
     }
 
-    func showDetail(film: Result?) {
+    func showDetail(film: Movie?) {
         if let navigationController = navigationController {
-            guard let detailViewController = builder?.createDetailModule(film: film, router: self) else { return }
+            guard let detailViewController = builder?.createDetailModule(film: film) else { return }
             navigationController.pushViewController(detailViewController, animated: true)
         }
     }
