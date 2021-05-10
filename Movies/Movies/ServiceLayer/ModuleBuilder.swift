@@ -12,11 +12,10 @@ protocol BuilderProtocol {
     func createDetailModule(film: Movie?) -> UIViewController
 }
 
-///
-class ModuleBuilder: BuilderProtocol {
-    let networkService = NetworkService()
-    let photoLoader = PhotoLoader()
-    let realmProvider = RealmProvider()
+final class ModuleBuilder: BuilderProtocol {
+    private let networkService = NetworkService()
+    private let photoLoader = PhotoLoader()
+    private let realmProvider = RealmProvider()
 
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)

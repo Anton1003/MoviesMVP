@@ -31,7 +31,6 @@ final class MoviesController: UITableViewController {
         guard let movie = presenter.films?[indexPath.row] else { return UITableViewCell() }
         cell.delegate = self
         cell.prepareCell(movie: movie)
-//        cell.imageView?.image = presenter.loadImage(by: movie.posterPath, completion: <#T##(UIImage?) -> ()#>)
         return cell
     }
 

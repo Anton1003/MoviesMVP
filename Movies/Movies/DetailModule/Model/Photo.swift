@@ -7,7 +7,6 @@
 
 import Foundation
 import RealmSwift
-
 ///
 struct PhotoModel: Codable {
     let id: Int

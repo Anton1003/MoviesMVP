@@ -18,8 +18,7 @@ protocol GetImagesServiceProtocol {
 
 protocol NetworkServiceProtocol: GetFilmServiceProtocol, GetImagesServiceProtocol {}
 
-///
-class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkServiceProtocol {
     let baseURL = "https://api.themoviedb.org"
     let apiKey = "1383ccd603d60a04c2085457ec3c9e0d"
 

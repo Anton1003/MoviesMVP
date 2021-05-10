@@ -65,7 +65,6 @@ final class DetailPresenter: DetailViewPresenterProtocol {
 
     func setFilm() {
         guard let photos = realmProvider?.get(type: Photo.self) else { return }
-//                .filter("filmId == %@", film?.id ?? 0) else { return }
         getImageData(for: Array(photos))
         networkingService?.loadPhotos(for: film?.id ?? 0) { [weak self] result in
             guard let self = self else { return }
@@ -74,7 +73,6 @@ final class DetailPresenter: DetailViewPresenterProtocol {
                 case let .success(photos):
                     guard let photos = photos else { return }
                     self.getImageData(for: photos)
-//                    photos.forEach { $0. = self.film?.id ?? 0 }
                     self.realmProvider?.save(items: photos)
                 case let .failure(error):
                     self.view?.failure(error)
