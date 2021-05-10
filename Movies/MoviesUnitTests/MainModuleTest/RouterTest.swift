@@ -8,8 +8,7 @@
 @testable import Movies
 import XCTest
 
-///
-class MockNavigationController: UINavigationController {
+final class MockNavigationController: UINavigationController {
     var presentedVC: UIViewController?
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -18,8 +17,7 @@ class MockNavigationController: UINavigationController {
     }
 }
 
-///
-class RouterTest: XCTestCase {
+final class RouterTest: XCTestCase {
     var router: RouterProtocol!
     var navigationController = MockNavigationController()
     let builder = ModuleBuilder()

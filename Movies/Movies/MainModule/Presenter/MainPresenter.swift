@@ -25,7 +25,6 @@ protocol MainViewPresenterProtocol: AnyObject {
     func loadImage(by path: String?, completion: @escaping (UIImage?) -> ())
 }
 
-///
 final class MainPresenter: MainViewPresenterProtocol {
     private weak var view: MainViewProtocol?
     private var networkingService: NetworkServiceProtocol!
