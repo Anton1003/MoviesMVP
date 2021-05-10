@@ -36,7 +36,7 @@ class Router: RouterProtocol {
 
     func showDetail(film: Movie?) {
         if let navigationController = navigationController {
-            guard let detailViewController = builder?.createDetailModule(film: film, router: self) else { return }
+            guard let detailViewController = builder?.createDetailModule(film: film) else { return }
             navigationController.pushViewController(detailViewController, animated: true)
         }
     }

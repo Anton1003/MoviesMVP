@@ -40,7 +40,7 @@ class NetworkService: NetworkServiceProtocol {
     }
 
     func loadPhotos(for filmId: Int, completion: @escaping (Result<[Photo]?, Error>) -> ()) {
-        let path = "/\(filmId)/images"
+        let path = "/3/movie/\(filmId)/images"
         let parameters: Parameters = [
             "api_key": apiKey
         ]
@@ -50,7 +50,7 @@ class NetworkService: NetworkServiceProtocol {
                 switch response.result {
                 case let .success(data):
                     do {
-                        let photos = try JSONDecoder().decode(PhotoModel.self, from: data).backrops
+                        let photos = try JSONDecoder().decode(PhotoModel.self, from: data).backdrops
                         completion(.success(photos))
                     } catch {
                         completion(.failure(error))

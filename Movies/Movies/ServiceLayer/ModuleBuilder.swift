@@ -9,16 +9,17 @@ import UIKit
 
 protocol BuilderProtocol {
     func createMainModule(router: RouterProtocol) -> UIViewController
-    func createDetailModule(film: Movie?, router: RouterProtocol) -> UIViewController
+    func createDetailModule(film: Movie?) -> UIViewController
 }
 
 ///
 class ModuleBuilder: BuilderProtocol {
+    let networkService = NetworkService()
+    let photoLoader = PhotoLoader()
+    let realmProvider = RealmProvider()
+
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)
-        let networkService = NetworkService()
-        let photoLoader = PhotoLoader()
-        let realmProvider = RealmProvider()
         let presenter = MainPresenter(
             view: view,
             networkingService: networkService,
@@ -30,12 +31,8 @@ class ModuleBuilder: BuilderProtocol {
         return view
     }
 
-    func createDetailModule(film: Movie?, router: RouterProtocol) -> UIViewController {
+    func createDetailModule(film: Movie?) -> UIViewController {
         let view = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(DetailController.self)
-        let networkService = NetworkService()
-        let photoLoader = PhotoLoader()
-        let realmProvider = RealmProvider()
-        let film = Movie()
         let presenter = DetailPresenter(
             view: view,
             networkingService: networkService,
