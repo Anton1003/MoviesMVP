@@ -9,7 +9,7 @@ import Alamofire
 import Foundation
 import UIKit
 
-protocol PhotoLoaderProtocol {
+protocol PhotoServiceProtocol {
     func getPhoto(
         by path: String,
         runQueue: DispatchQueue,
@@ -18,7 +18,7 @@ protocol PhotoLoaderProtocol {
     )
 }
 
-final class PhotoLoader: PhotoLoaderProtocol {
+final class PhotoService: PhotoServiceProtocol {
     private var images: [String: UIImage] = [:]
     private let cacheLifetime: TimeInterval = 60 * 60 * 24 * 7
 
@@ -38,7 +38,7 @@ final class PhotoLoader: PhotoLoaderProtocol {
         guard let cachDir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
         else { return nil }
         let hashName = String(describing: path.hashValue)
-        return cachDir.appendingPathComponent(PhotoLoader.pathName + "/" + hashName).path
+        return cachDir.appendingPathComponent(PhotoService.pathName + "/" + hashName).path
     }
 
     private func saveImageToCache(path: String, image: UIImage) {
@@ -87,7 +87,8 @@ final class PhotoLoader: PhotoLoaderProtocol {
     ) {
         if let photo = images[path] {
             completion(photo)
-        } else if let photo = getImageFromCache(path: path) {
+        } else
+        if let photo = getImageFromCache(path: path) {
             completion(photo)
         } else {
             loadPhoto(by: path, runQueue: runQueue, completionQueue: completionQueue, completion: completion)

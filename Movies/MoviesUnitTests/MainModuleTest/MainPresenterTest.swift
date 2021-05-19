@@ -50,21 +50,4 @@ final class MainPresenterTest: XCTestCase {
         networkService = nil
         presenter = nil
     }
-
-//    func testGetSuccesResult() {
-//        let film = Film(id: 1, results: [])
-//        films.append(film)
-//
-//        view = MockView()
-//        networkService = MockNetworkService(film: film)
-//        presenter = MainPresenter(view: view, networkingService: networkService as! NetworkServiceProtocol, router: <#T##RouterProtocol#>, photoLoader: <#T##PhotoLoaderProtocol#>, realmProvider: <#T##RealmProviderProtocol#>)
-//
-//        var catchFilm: Film?
-//
-//        networkService.getMovies { result in
-//            catchFilm = result
-//        }
-//
-//        XCTAssertNotEqual(catchFilm?.id, 0)
-//    }
 }

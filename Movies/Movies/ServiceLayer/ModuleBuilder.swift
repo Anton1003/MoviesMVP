@@ -14,8 +14,8 @@ protocol BuilderProtocol {
 
 final class ModuleBuilder: BuilderProtocol {
     private let networkService = NetworkService()
-    private let photoLoader = PhotoLoader()
-    private let realmProvider = RealmProvider()
+    private let photoLoader = PhotoService()
+    private let realmProvider = RealmService()
 
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MoviesController.self)

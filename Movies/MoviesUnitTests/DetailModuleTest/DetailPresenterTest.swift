@@ -10,7 +10,11 @@ import XCTest
 
 ///
 class MockDetailView: DetailViewProtocol {
-    func setFilm(film: Result?) {}
+    func success() {}
+
+    func failure(_ error: Error) {}
+
+    func setFilm(film: Result<Photo, Error>?) {}
 }
 
 ///
@@ -32,32 +36,4 @@ class DetailPresenterTest: XCTestCase {
         networkService = nil
         presenter = nil
     }
-
-//    func testGetSuccesResult() {
-//        let film = Film(id: 2, results: [Result(
-//            backdropPath: "Foo",
-//            id: 1,
-//            overview: "Baz",
-//            popularity: 0.1,
-//            posterPath: "SomePath",
-//            releaseDate: "12-12-12",
-//            title: "SomeTitle",
-//            voteAverage: 0.2
-//        )])
-//
-//        films.append(film)
-//
-//        view = MockDetailView()
-//        networkService = MockNetworkService(film: film)
-//        presenter = DetailPresenter(
-//            view: view,
-//            networkingService: networkService,
-//            router: router,
-//            film: film.results.first
-//        )
-//
-//        var catchResult = presenter.setFilm()
-//
-//        XCTAssertNotEqual(catchResult, 0)
-//    }
 }
