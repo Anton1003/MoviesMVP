@@ -17,8 +17,8 @@ protocol MainViewPresenterProtocol: AnyObject {
         view: MainViewProtocol,
         networkingService: NetworkServiceProtocol,
         router: RouterProtocol,
-        photoLoader: PhotoLoaderProtocol,
-        realmProvider: RealmProviderProtocol
+        photoLoader: PhotoServiceProtocol,
+        realmProvider: RealmServiceProtocol
     )
     func getFilms()
     func tapOnTheFilm(film: Movie?)
@@ -29,16 +29,16 @@ final class MainPresenter: MainViewPresenterProtocol {
     private weak var view: MainViewProtocol?
     private var networkingService: NetworkServiceProtocol!
     private var router: RouterProtocol?
-    private var photoLoader: PhotoLoaderProtocol?
-    private var realmProvider: RealmProviderProtocol?
+    private var photoLoader: PhotoServiceProtocol?
+    private var realmProvider: RealmServiceProtocol?
     var films: [Movie]?
 
     init(
         view: MainViewProtocol,
         networkingService: NetworkServiceProtocol,
         router: RouterProtocol,
-        photoLoader: PhotoLoaderProtocol,
-        realmProvider: RealmProviderProtocol
+        photoLoader: PhotoServiceProtocol,
+        realmProvider: RealmServiceProtocol
     ) {
         self.view = view
         self.networkingService = networkingService
