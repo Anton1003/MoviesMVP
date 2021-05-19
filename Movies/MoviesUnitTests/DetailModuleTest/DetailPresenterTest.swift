@@ -10,17 +10,14 @@ import XCTest
 
 ///
 class MockDetailView: DetailViewProtocol {
-    func setFilm(film: Movie?) {
-        
-    }
-    
+    func setFilm(film: Movie?) {}
+
     func success() {}
 
     func failure(_ error: Error) {}
 }
 
-///
-class DetailPresenterTest: XCTestCase {
+final class DetailPresenterTest: XCTestCase {
     var view: MockDetailView!
     var presenter: DetailPresenter!
     var networkService: GetFilmServiceProtocol!
