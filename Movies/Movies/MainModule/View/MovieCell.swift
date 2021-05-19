@@ -11,7 +11,6 @@ protocol MovieCellDelegate: AnyObject {
     func getImage(path: String, completion: @escaping (UIImage?) -> ())
 }
 
-///
 final class MovieCell: UITableViewCell {
     weak var delegate: MovieCellDelegate?
 
@@ -20,8 +19,6 @@ final class MovieCell: UITableViewCell {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var categoriesLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
-
-//    private var cacheDictionary: [String: Data] = [:]
 
     override func awakeFromNib() {
         super.awakeFromNib()

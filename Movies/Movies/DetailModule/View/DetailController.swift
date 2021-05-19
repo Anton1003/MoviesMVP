@@ -6,7 +6,7 @@
 //
 
 import UIKit
-///
+
 final class DetailController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var titleLabel: UILabel!
