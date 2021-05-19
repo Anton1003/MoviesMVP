@@ -10,11 +10,13 @@ import XCTest
 
 ///
 class MockDetailView: DetailViewProtocol {
+    func setFilm(film: Movie?) {
+        
+    }
+    
     func success() {}
 
     func failure(_ error: Error) {}
-
-    func setFilm(film: Result<Photo, Error>?) {}
 }
 
 ///
