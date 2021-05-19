@@ -18,8 +18,8 @@ protocol DetailViewPresenterProtocol: AnyObject {
     init(
         view: DetailViewProtocol,
         networkingService: NetworkServiceProtocol,
-        photoLoader: PhotoLoaderProtocol?,
-        realmProvider: RealmProviderProtocol,
+        photoLoader: PhotoServiceProtocol?,
+        realmProvider: RealmServiceProtocol,
         film: Movie?
     )
     func setFilm()
@@ -30,14 +30,14 @@ final class DetailPresenter: DetailViewPresenterProtocol {
     var film: Movie?
     private weak var view: DetailViewProtocol?
     private var networkingService: NetworkServiceProtocol!
-    private var photoLoader: PhotoLoaderProtocol?
-    private var realmProvider: RealmProviderProtocol?
+    private var photoLoader: PhotoServiceProtocol?
+    private var realmProvider: RealmServiceProtocol?
 
     required init(
         view: DetailViewProtocol,
         networkingService: NetworkServiceProtocol,
-        photoLoader: PhotoLoaderProtocol?,
-        realmProvider: RealmProviderProtocol,
+        photoLoader: PhotoServiceProtocol?,
+        realmProvider: RealmServiceProtocol,
         film: Movie?
     ) {
         self.view = view

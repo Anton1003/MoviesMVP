@@ -7,12 +7,12 @@
 
 import RealmSwift
 
-protocol RealmProviderProtocol {
+protocol RealmServiceProtocol {
     func get<RealmObject: Object>(type: RealmObject.Type) -> Results<RealmObject>
     func save<RealmObject: Object>(items: [RealmObject])
 }
 
-final class RealmProvider: RealmProviderProtocol {
+final class RealmService: RealmServiceProtocol {
     func get<RealmObject: Object>(type: RealmObject.Type) -> Results<RealmObject> {
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         guard let realm = try? Realm(configuration: config) else { fatalError("Error Realm") }
